@@ -18,6 +18,8 @@ function LoginCard() {
       },
       body: JSON.stringify(registerInfo),
     }).then((response) => console.log(response));
+    setUsername("");
+    setPassword("");
     toast.success("Successfully logged in!");
   };
   return (

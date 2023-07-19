@@ -18,6 +18,8 @@ function RegisterCard() {
       },
       body: JSON.stringify(registerInfo),
     }).then((response) => console.log(response));
+    setUsername("");
+    setPassword("");
     toast.success("User added!");
   };
 

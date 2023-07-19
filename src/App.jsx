@@ -1,7 +1,7 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import LoginPage from "./pages/Login";
 import RegisterPage from "./pages/Register";
-import ErrorPage from "./pages/Error/404";
+import ErrorPage from "./pages/Error";
 import LandingPage from "./pages/Landing";
 import { Toaster } from "react-hot-toast";
 

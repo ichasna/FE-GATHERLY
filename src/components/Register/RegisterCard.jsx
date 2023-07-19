@@ -17,10 +17,18 @@ function RegisterCard() {
         "Content-Type": "application/json",
       },
       body: JSON.stringify(registerInfo),
-    }).then((response) => console.log(response));
+    })
+      .then((response) => console.log(response))
+      .catch((error) => {
+        console.error(error);
+        toast.error("Error!");
+      });
+    toast.success("User added!");
+  };
+
+  const clearInput = () => {
     setUsername("");
     setPassword("");
-    toast.success("User added!");
   };
 
   return (
@@ -50,6 +58,7 @@ function RegisterCard() {
               <input
                 type="text"
                 onChange={(e) => setUsername(e.currentTarget.value)}
+                value={username}
                 placeholder="caralmira"
                 className="block w-full placeholder-[#4E5A6E] placeholder:text-sm sm:placeholder:p-1 bg-transparent border border-[#404040] rounded-md mt-1 p-1"
               />
@@ -62,6 +71,7 @@ function RegisterCard() {
               <input
                 type="password"
                 onChange={(e) => setPassword(e.currentTarget.value)}
+                value={password}
                 placeholder="*****"
                 className="block w-full placeholder-[#4E5A6E] placeholder:text-sm sm:placeholder:p-1 bg-transparent border border-[#404040] rounded-md mt-1 p-1"
               />
@@ -70,7 +80,10 @@ function RegisterCard() {
             <div className="mt-8 lg:mt-10 text-center">
               <button
                 type="button"
-                onClick={() => handleSubmit()}
+                onClick={() => {
+                  handleSubmit()
+                  clearInput()
+                }}
                 className="px-3 py-2 sm:px-5 text-white text-md sm:text-lg lg:text-xl bg-gradient-to-b from-[#C44054] to-[#DB77A5] hover:from-pink-500 hover:to-yellow-500 hover:scale-105 duration-300 rounded-md"
               >
                 Sign up

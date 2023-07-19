@@ -17,9 +17,12 @@ function LoginCard() {
         "Content-Type": "application/json",
       },
       body: JSON.stringify(registerInfo),
-    }).then((response) => console.log(response));
-    setUsername("");
-    setPassword("");
+    })
+    .then((response) => console.log(response))
+    .catch((error) => {
+      console.error(error)
+      toast.error("Error!");
+    });
     toast.success("Successfully logged in!");
   };
   return (

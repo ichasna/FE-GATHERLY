@@ -10,7 +10,6 @@ function LoginCard() {
       username: username,
       password: password,
     };
-    console.log(registerInfo);
     fetch(`http://localhost:5000/users`, {
       method: "POST",
       headers: {
@@ -18,13 +17,19 @@ function LoginCard() {
       },
       body: JSON.stringify(registerInfo),
     })
-    .then((response) => console.log(response))
-    .catch((error) => {
-      console.error(error)
-      toast.error("Error!");
-    });
+      .then((response) => console.log(response.text))
+      .catch((error) => {
+        console.error(error);
+        toast.error("Error!");
+      });
     toast.success("Successfully logged in!");
   };
+
+  const clearInput = () => {
+    setUsername("");
+    setPassword("");
+  };
+
   return (
     <div className="flex flex-col items-center justify-center w-full">
       <div className="flex flex-col items-center justify-center p-6 w-[260px] sm:w-[310px] lg:w-[350px] bg-[#171B21] text-white border border-[#404040] rounded-2xl">
@@ -40,6 +45,7 @@ function LoginCard() {
               <input
                 type="string"
                 onChange={(e) => setUsername(e.currentTarget.value)}
+                value={username}
                 placeholder="qissa"
                 className="block w-full placeholder-[#4E5A6E] placeholder:text-sm md:placeholder:p-1 bg-transparent border border-[#404040] rounded-md mt-1 p-1"
               />
@@ -52,6 +58,7 @@ function LoginCard() {
               <input
                 type="password"
                 onChange={(e) => setPassword(e.currentTarget.value)}
+                value={password}
                 placeholder="*****"
                 className="block w-full placeholder-[#4E5A6E] placeholder:text-sm md:placeholder:p-1 bg-transparent border border-[#404040] rounded-md mt-1 p-1"
               />
@@ -59,7 +66,10 @@ function LoginCard() {
 
             <div className="mt-4 lg:mt-6 text-center">
               <button
-                onClick={() => handleSubmit()}
+                onClick={() => {
+                  handleSubmit();
+                  clearInput();
+                }}
                 className="px-3 py-1 sm:px-5 text-md sm:text-lg text-white bg-gradient-to-b from-[#C44054] to-[#DB77A5] rounded-lg hover:from-pink-500 hover:to-yellow-500 hover:scale-105 duration-300"
               >
                 Login

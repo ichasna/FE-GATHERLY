@@ -21,7 +21,7 @@ function Intro() {
           </a>
           <a
             href="/register"
-            className="flex flex-col justify-center items-center text-center w-24 h-9 md:w-36 md:h-11 ml-10 md:ml-14 text-white text-md md:text-lg bg-gradient-to-b from-[#5D5FEF] to-[#A5A6F6] hover:from-[#5D5FEF] hover:to-[#A5A6F6] hover:scale-105 duration-300 rounded-md"
+            className="flex flex-col justify-center items-center text-center w-24 h-9 md:w-36 md:h-11 ml-10 md:ml-14 text-white text-md md:text-lg bg-gradient-to-b from-[#5D5FEF] to-[#A5A6F6] hover:from-violet-700 hover:to-pink-300  hover:scale-105 duration-300 rounded-md"
           >
             Sign up
           </a>

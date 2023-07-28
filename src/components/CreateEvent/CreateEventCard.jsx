@@ -2,7 +2,6 @@ import { useState } from "react";
 import toast from "react-hot-toast";
 import FormCreateEvent from "./formCreateEvent";
 import HeaderCreateEvent from "./headerCreateEvent";
-import ListEvent from "./listEvent"
 import Events from "./Events";
 
 function CreateEventCard() {
@@ -12,12 +11,12 @@ function CreateEventCard() {
       id: 'e1',
       eventName: 'Compfest',
       eventDesc: 'Sebuah acara yang diselenggarakan oleh anak IT',
-      eventMember: 'carissa_yudiva',
+      eventMember: ["carissa", "SYARIFAH", "hasna"],
     },
   ];
 
   const [event, setEvent] = useState(DUMMY_DATA);
-  console.log(event)
+
   function addEventHandler(event) {
     
     setEvent((prevEvent) => {

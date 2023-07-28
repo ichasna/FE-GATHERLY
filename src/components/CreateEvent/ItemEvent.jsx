@@ -5,7 +5,7 @@ function ItemEvent(props){
         
             <h1>Deskripsi event: {props.eventDesc}</h1>
          
-            <h1>Deskripsi member: {props.eventMember}</h1>
+            <h1>Member team: {props.eventMember}</h1>
             
         </div>
     )

@@ -28,7 +28,7 @@ function CreateEventCard() {
     });
   }
 
-  function addMembersHandler(members, eventId) {
+  function addMembersHandler(members) {
     fetch(`http://localhost:5000/members/addmember/${eventId}`, {
       method: "POST",
       headers: {

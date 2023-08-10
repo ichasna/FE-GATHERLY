@@ -81,8 +81,8 @@ function RegisterCard() {
               <button
                 type="button"
                 onClick={() => {
-                  handleSubmit()
-                  clearInput()
+                  handleSubmit();
+                  clearInput();
                 }}
                 className="px-3 py-2 sm:px-5 text-white text-md sm:text-lg lg:text-xl bg-gradient-to-b from-[#C44054] to-[#DB77A5] hover:from-pink-500 hover:to-yellow-500 hover:scale-105 duration-300 rounded-md"
               >

@@ -1,28 +1,44 @@
 import { useState } from "react";
 import toast from "react-hot-toast";
+import { useNavigate } from "react-router-dom";
 
 function LoginCard() {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
+  const navigate = useNavigate();
 
-  const handleSubmit = () => {
-    const registerInfo = {
+  const handleSubmit = (e) => {
+    e.preventDefault(); // Prevent form submission
+
+    const loginInfo = {
       username: username,
       password: password,
     };
+
     fetch(`http://localhost:5000/users`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify(registerInfo),
+      body: JSON.stringify(loginInfo),
     })
-      .then((response) => console.log(response.text))
+      .then((response) => response.text())
+      .then((data) => {
+        if (data.includes("Login successful.")) {
+          toast.success("Login successful!");
+          navigate("/register");
+        } else if (data.includes("Cannot find user.")) {
+          toast.error("Cannot find user.");
+        } else if (data.includes("Password incorrect.")) {
+          toast.error("Password incorrect.");
+        } else {
+          toast.error("An error occurred.");
+        }
+      })
       .catch((error) => {
         console.error(error);
-        toast.error("Error!");
+        toast.error("An error occurred.");
       });
-    toast.success("Successfully logged in!");
   };
 
   const clearInput = () => {
@@ -37,7 +53,7 @@ function LoginCard() {
           Log in
         </p>
         <div className="w-11/12">
-          <form className="mt-6 lg:mt-8">
+          <form className="mt-6 lg:mt-8" onSubmit={handleSubmit}>
             <div className="">
               <label htmlFor="username" className="block text-xs lg:text-md">
                 Username
@@ -66,10 +82,7 @@ function LoginCard() {
 
             <div className="mt-4 lg:mt-6 text-center">
               <button
-                onClick={() => {
-                  handleSubmit();
-                  clearInput();
-                }}
+                type="submit"
                 className="px-3 py-1 sm:px-5 text-md sm:text-lg text-white bg-gradient-to-b from-[#C44054] to-[#DB77A5] rounded-lg hover:from-pink-500 hover:to-yellow-500 hover:scale-105 duration-300"
               >
                 Login

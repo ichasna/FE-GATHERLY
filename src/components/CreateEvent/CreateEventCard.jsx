@@ -1,5 +1,4 @@
 import { useState } from "react";
-import toast from "react-hot-toast";
 import FormCreateEvent from "./FormCreateEvent";
 import HeaderCreateEvent from "./headerCreateEvent";
 import Events from "./Events";

@@ -26,7 +26,7 @@ function LoginCard() {
       .then((data) => {
         if (data.includes("Login successful.")) {
           toast.success("Login successful!");
-          navigate("/register");
+          navigate("/dashboard");
         } else if (data.includes("Cannot find user.")) {
           toast.error("Cannot find user.");
         } else if (data.includes("Password incorrect.")) {

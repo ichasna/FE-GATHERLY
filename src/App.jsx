@@ -3,7 +3,7 @@ import LoginPage from "./pages/Login";
 import RegisterPage from "./pages/Register";
 import ErrorPage from "./pages/Error";
 import LandingPage from "./pages/Landing";
-import Dashboard from "./components/Dashboard";
+import Dashboard from "./pages/Dashboard";
 import CreateEventPage from "./pages/CreateEvent";
 import { Toaster } from "react-hot-toast";
 

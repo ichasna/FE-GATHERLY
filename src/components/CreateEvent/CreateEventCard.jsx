@@ -10,6 +10,7 @@ function CreateEventCard() {
   const [listEvents, setListEvents] = useState([])
   const [eventId, setEventId] = useState();
 
+  // TODO
   function addEventHandler(event) {
     fetch(`http://localhost:5000/events/create`, {
       method: "POST",

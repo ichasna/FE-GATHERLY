@@ -61,7 +61,7 @@ function CreateEventCard() {
           onSaveMembersData={addMembersHandler}
         />
       </div>
-      <Events event={event} members={members} />
+      {/* <Events event={event} members={members} /> */}
     </div>
   );
 }

@@ -6,6 +6,8 @@ function Logo() {
           src="assets\Vector.png"
           className="w-36 h-36 md:w-36 lg:w-96 lg:h-96"
         ></img>
+      </a>
+      <a href="/home">
         <img src="assets\Logo.png" className="w-auto h-12 lg:h-16"></img>
       </a>
     </div>

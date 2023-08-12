@@ -1,9 +1,21 @@
-function Table () {
-    return (
-        <div className="flex flex-col justify-center items-start h-full w-full rounded-xl border border-solid border-[#404040] bg-[#1A1E23]">
-            <p>Test</p>
-        </div>
-    )
+function Table() {
+  return (
+    <table className="w-full border border-separate border-[#404040] rounded-xl text-[15px] text-white table-fixed">
+      <thead>
+        <tr>
+          <th className="p-3" colSpan={2}>Task</th>
+          <th className="p-3" colSpan={1}>Due Date</th>
+          <th className="p-3" colSpan={1}>PIC</th>
+          <th className="p-3" colSpan={2}>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>Planning</tr>
+        <tr>Execution</tr>
+        <tr>Post Event</tr>
+      </tbody>
+    </table>
+  );
 }
 
 export default Table;

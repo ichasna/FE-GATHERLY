@@ -1,4 +1,4 @@
-import Table from "./TaskTracking/Table";
+import TableCard from "./TaskTracking/TableCard";
 import Navbar from "./UI/Commons/Navbar";
 
 function TaskTracking() {
@@ -8,7 +8,7 @@ function TaskTracking() {
         <Navbar />
       </div> */}
       <div className="h-full w-full p-4 flex justify-center items-center">
-        <Table />
+        <TableCard />
       </div>
     </>
   );

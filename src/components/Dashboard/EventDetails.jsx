@@ -1,4 +1,5 @@
 function EventDetails() {
+  const user = localStorage.getItem("user");
   return (
     <>
       <div className="flex flex-row w-[918px] items-start justify-between gap-[26px] text-[30px]">
@@ -26,7 +27,7 @@ function EventDetails() {
           <div className="flex w-[154px] h-[195px] justify-center items-center ">
             <div className="flex w-[120px] h-[40px] p-0px 2px justify-center items-center rounded-10px border border-solid border-[#404040] bg-[#1A1E23] shadow-[0px_4px_4px_0px_rgba(0,_0,_0,_0.25)] rounded-xl">
               <div className="flex w-[82px] h-[40px] flex-col justify-center flex-shrink-0 text-white text-center font-dm-sans text-20 font-normal">
-                Abby
+                {user}
               </div>
               <img
                 className="relative w-[26px] h-[26px] overflow-hidden shrink-0"

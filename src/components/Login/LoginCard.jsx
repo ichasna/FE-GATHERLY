@@ -26,6 +26,7 @@ function LoginCard() {
       .then((data) => {
         if (data.includes("Login successful.")) {
           toast.success("Login successful!");
+          localStorage.setItem("user", username);
           navigate("/dashboard");
         } else if (data.includes("Cannot find user.")) {
           toast.error("Cannot find user.");

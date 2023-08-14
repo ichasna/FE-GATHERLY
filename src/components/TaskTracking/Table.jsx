@@ -52,7 +52,7 @@ function Table() {
     }
   };
   return (
-    <div className="rounded-lg overflow-hidden border-2 border-[#404040]">
+    <div className="rounded-lg overflow-hidden border-2 border-[#404040] shadow-md">
       <table className="table-fixed w-full">
         <thead>
           <tr>
@@ -74,7 +74,7 @@ function Table() {
                 PIC
               </p>
             </th>
-            <th className="p-2 lg:p-3  border-r border-[#404040]" colSpan={4}>
+            <th className="p-2 lg:p-3  border-[#404040]" colSpan={4}>
               <p className="text-white text-[12px] lg:text-[15px] font-light">
                 Description
               </p>

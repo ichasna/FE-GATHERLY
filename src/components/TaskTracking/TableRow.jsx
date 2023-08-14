@@ -44,14 +44,14 @@ function TableRow({ title, data }) {
               </td>
               <td colSpan={2}>
                 <div className="flex flex-row justify-center items-center">
-                  <span className="bg-white lg:py-3 lg:px-5 lg:my-3 py-1 px-2 my-2 rounded-xl font-bold">
+                  <span className="bg-white text-center w-24 lg:w-40 lg:py-3 lg:px-5 lg:my-3 py-1 px-2 my-2 rounded-xl font-bold">
                     {item.dueDate}
                   </span>
                 </div>
               </td>
               <td colSpan={2}>
                 <div className="flex flex-row justify-center items-center">
-                  <span className="bg-white lg:py-3 lg:px-5 lg:my-3 py-1 px-2 my-2 rounded-xl font-bold text-[#787486] whitespace-nowrap">
+                  <span className="bg-white text-center w-24 lg:w-40 lg:py-3 lg:px-5 lg:my-3 py-1 px-2 my-2 rounded-xl font-bold text-[#787486] whitespace-nowrap">
                     {item.PIC}
                   </span>
                 </div>

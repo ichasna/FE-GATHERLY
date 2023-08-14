@@ -1,4 +1,4 @@
-import Dropdown from "../UI/Utilities/Dropdown";
+import TableRow from "./TableRow";
 
 function Table() {
   return (
@@ -20,30 +20,9 @@ function Table() {
         </tr>
       </thead>
       <tbody>
-        <tr className="border border-[#404040]">
-          <div className="flex flex-row justify-start items-center p-4">
-            <Dropdown />
-            <span className="text-[20px] text-[#919191] font-bold ml-3">
-              Planning
-            </span>
-          </div>
-        </tr>
-        <tr className="border border-[#404040]">
-          <div className="flex flex-row justify-start items-center p-4">
-            <Dropdown />
-            <span className="text-[20px] text-[#919191] font-bold ml-3">
-              Execution
-            </span>
-          </div>
-        </tr>
-        <tr className="border border-[#404040]">
-          <div className="flex flex-row justify-start items-center p-4">
-            <Dropdown />
-            <span className="text-[20px] text-[#919191] font-bold ml-3">
-              Post Event
-            </span>
-          </div>
-        </tr>
+        <TableRow title="Planning" />
+        <TableRow title="Execution" />
+        <TableRow title="Post Event" />
       </tbody>
     </table>
   );

@@ -1,23 +1,30 @@
 import TableRow from "./TableRow";
 
 function Table() {
-  const dummyData = ["test", "haha"];
+  const dummyData = [
+    {
+      task: "Create an event plan and define roles",
+      dueDate: "15/05/2023",
+      PIC: "Amira Nisrina",
+      description: ""
+    }
+  ];
   return (
     <div className="rounded-lg overflow-hidden border-2 border-[#404040]">
       <table className="table-fixed w-full">
         <thead>
           <tr>
-            <th className="p-3 border-r border-[#404040]" colSpan={2}>
-              <p className="text-white text-[15px] font-light">Task</p>
+            <th className="p-2 lg:p-3 border-r border-[#404040] col-span-4" colSpan={4}>
+              <p className="text-white text-[12px] lg:text-[15px] font-light">Task</p>
             </th>
-            <th className="p-3 border-r border-[#404040]" colSpan={1}>
-              <p className="text-white text-[15px] font-light">Due Date</p>
+            <th className="p-2 lg:p-3  border-r border-[#404040]" colSpan={2}>
+              <p className="text-white text-[12px] lg:text-[15px] font-light">Due Date</p>
             </th>
-            <th className="p-3 border-r border-[#404040]" colSpan={1}>
-              <p className="text-white text-[15px] font-light">PIC</p>
+            <th className="p-2 lg:p-3  border-r border-[#404040]" colSpan={2}>
+              <p className="text-white text-[12px] lg:text-[15px] font-light">PIC</p>
             </th>
-            <th className="" colSpan={2}>
-              <p className="text-white text-[15px] font-light">Description</p>
+            <th className="p-2 lg:p-3  border-r border-[#404040]" colSpan={4}>
+              <p className="text-white text-[12px] lg:text-[15px] font-light">Description</p>
             </th>
           </tr>
         </thead>

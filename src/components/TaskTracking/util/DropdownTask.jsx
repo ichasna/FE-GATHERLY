@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-function Dropdown({setShowRow, showRow}) {
+function DropdownTask({setShowRow, showRow}) {
   const [isOpen, setIsOpen] = useState(false);
   const toggleDropdown = () => {
     setIsOpen(!isOpen);
@@ -61,4 +61,4 @@ function Dropdown({setShowRow, showRow}) {
   );
 }
 
-export default Dropdown;
+export default DropdownTask;

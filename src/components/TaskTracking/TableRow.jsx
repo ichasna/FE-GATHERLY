@@ -1,5 +1,5 @@
 import { useState } from "react";
-import Dropdown from "./util/Dropdown";
+import DropdownTask from "./util/DropdownTask";
 
 function TableRow({ title, data }) {
   const [showRow, setShowRow] = useState(false);
@@ -8,7 +8,7 @@ function TableRow({ title, data }) {
       <tr className="border-t border-[#404040]">
         <td colSpan={12}>
           <div className="flex flex-row justify-start items-center p-2 lg:p-4">
-            <Dropdown setShowRow={setShowRow} showRow={showRow} />
+            <DropdownTask setShowRow={setShowRow} showRow={showRow} />
             <span className="text-[15px] lg:text-[20px] text-[#919191] font-bold ml-3">
               {title}
             </span>

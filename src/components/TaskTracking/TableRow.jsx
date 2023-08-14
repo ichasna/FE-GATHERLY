@@ -18,7 +18,10 @@ function TableRow({ title, data }) {
       {showRow && (
         <>
           {data.map((item, index) => (
-            <tr key={index} className="border-t border-[#404040] text-[11px] lg:text-[16px]">
+            <tr
+              key={index}
+              className="border-t border-[#404040] text-[11px] lg:text-[16px]"
+            >
               <td colSpan={4}>
                 <div className="flex flex-row justify-start items-center p-2 lg:p-4">
                   <svg
@@ -41,12 +44,16 @@ function TableRow({ title, data }) {
               </td>
               <td colSpan={2}>
                 <div className="flex flex-row justify-center items-center">
-                  <span className="bg-white lg:py-3 lg:px-5 lg:my-3 py-1 px-2 my-2 rounded-xl font-bold">{item.dueDate}</span>
+                  <span className="bg-white lg:py-3 lg:px-5 lg:my-3 py-1 px-2 my-2 rounded-xl font-bold">
+                    {item.dueDate}
+                  </span>
                 </div>
               </td>
               <td colSpan={2}>
                 <div className="flex flex-row justify-center items-center">
-                  <span className="bg-white lg:py-3 lg:px-5 lg:my-3 py-1 px-2 my-2 rounded-xl font-bold text-[#787486] whitespace-nowrap">{item.PIC}</span>
+                  <span className="bg-white lg:py-3 lg:px-5 lg:my-3 py-1 px-2 my-2 rounded-xl font-bold text-[#787486] whitespace-nowrap">
+                    {item.PIC}
+                  </span>
                 </div>
               </td>
               <td colSpan={4}>
@@ -56,6 +63,25 @@ function TableRow({ title, data }) {
               </td>
             </tr>
           ))}
+          <tr className="border-t border-[#404040] text-[11px] lg:text-[16px]">
+            <td colSpan={12}>
+              <div className="flex flex-row justify-start items-center p-2 lg:p-4">
+                <svg
+                  className="w-4 h-4 lg:w-5 lg:h-5 flex-shrink-0 hover:brightness-75 duration-300"
+                  width="22"
+                  height="22"
+                  viewBox="0 0 22 22"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M14.66 0C18.06 0 20 1.92 20 5.33V14.67C20 18.06 18.07 20 14.67 20H5.33C1.92 20 0 18.06 0 14.67V5.33C0 1.92 1.92 0 5.33 0H14.66ZM9.99 5.51C9.53 5.51 9.16 5.88 9.16 6.34V9.16H6.33C6.11 9.16 5.9 9.25 5.74 9.4C5.59 9.56 5.5 9.769 5.5 9.99C5.5 10.45 5.87 10.82 6.33 10.83H9.16V13.66C9.16 14.12 9.53 14.49 9.99 14.49C10.45 14.49 10.82 14.12 10.82 13.66V10.83H13.66C14.12 10.82 14.49 10.45 14.49 9.99C14.49 9.53 14.12 9.16 13.66 9.16H10.82V6.34C10.82 5.88 10.45 5.51 9.99 5.51Z"
+                    fill="#404040"
+                  />
+                </svg>
+              </div>
+            </td>
+          </tr>
         </>
       )}
     </>

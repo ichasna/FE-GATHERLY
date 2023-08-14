@@ -1,6 +1,6 @@
 function Navbar() {
   return (
-    <div className="rounded-xl bg-white w-[260px] h-[760px] flex flex-row py-[25px] px-[20px] box-border items-start justify-center">
+    <div className="rounded-xl bg-white w-[260px] h-full flex flex-row py-[25px] px-[20px] box-border items-start justify-center">
       <div className="flex flex-col w-full items-center justify-center gap-[38px]">
         <img
           className="relative w-[42px] h-[46px]"

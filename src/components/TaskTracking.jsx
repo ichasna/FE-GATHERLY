@@ -4,9 +4,9 @@ import Navbar from "./UI/Commons/Navbar";
 function TaskTracking() {
   return (
     <>
-      {/* <div className="hidden lg:flex lg:justify-center lg:items-center bg-blue-200 h-full">
+      <div className="hidden lg:flex lg:justify-center lg:items-center py-4 h-full">
         <Navbar />
-      </div> */}
+      </div>
       <div className="h-full w-full p-4 flex justify-center items-center">
         <TableCard />
       </div>

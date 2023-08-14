@@ -1,7 +1,9 @@
+import { useState } from "react";
 import TableRow from "./TableRow";
 
 function Table() {
-  const dummyData = [
+  const [newSection, setNewSection] = useState("");
+  const [dummyData, setDummyData] = useState([
     {
       title: "Planning",
       data: [
@@ -35,7 +37,20 @@ function Table() {
         },
       ],
     },
-  ];
+  ]);
+  const handleFormSubmit = (e) => {
+    e.preventDefault();
+    if (newSection) {
+      setDummyData([
+        ...dummyData,
+        {
+          title: newSection,
+          data: [],
+        },
+      ]);
+      setNewSection("");
+    }
+  };
   return (
     <div className="rounded-lg overflow-hidden border-2 border-[#404040]">
       <table className="table-fixed w-full">
@@ -72,7 +87,10 @@ function Table() {
           ))}
           <tr className="border-t border-[#404040]">
             <td colSpan={12}>
-              <form className="flex flex-row justify-start items-center p-2 lg:p-4">
+              <form
+                onSubmit={handleFormSubmit}
+                className="flex flex-row justify-start items-center p-2 lg:p-4"
+              >
                 <button type="submit">
                   <svg
                     className="w-4 h-4 lg:w-5 lg:h-5 flex-shrink-0 hover:brightness-75 duration-300"
@@ -89,6 +107,9 @@ function Table() {
                   </svg>
                 </button>
                 <input
+                  type="text"
+                  value={newSection}
+                  onChange={(e) => setNewSection(e.target.value)}
                   placeholder="Add a section..."
                   className="text-[15px] lg:text-[20px] text-[#919191] opacity-50 bg-transparent focus:outline-none focus:ring-0 font-bold ml-3"
                 ></input>

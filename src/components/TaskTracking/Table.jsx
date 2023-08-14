@@ -1,6 +1,7 @@
 import TableRow from "./TableRow";
 
 function Table() {
+  const dummyData = ["test", "haha"];
   return (
     <table className="table-fixed w-full border-collapse border border-[#404040]">
       <thead>
@@ -20,9 +21,9 @@ function Table() {
         </tr>
       </thead>
       <tbody>
-        <TableRow title="Planning" />
-        <TableRow title="Execution" />
-        <TableRow title="Post Event" />
+        <TableRow title="Planning" data={dummyData} />
+        <TableRow title="Execution" data={dummyData} />
+        <TableRow title="Post Event" data={dummyData} />
       </tbody>
     </table>
   );

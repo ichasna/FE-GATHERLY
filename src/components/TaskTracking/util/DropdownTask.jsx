@@ -19,7 +19,7 @@ function DropdownTask({setShowRow, showRow}) {
             }}
           >
             <svg
-              className="w-5 h-5 lg:w-7 lg:h-7 flex-shrink-0 hover:brightness-75 duration-300"
+              className="w-5 h-5 m-1 lg:w-7 lg:h-7 lg:m-2 flex-shrink-0 hover:brightness-75 duration-300"
               width="20"
               height="20"
               viewBox="0 0 20 20"
@@ -42,7 +42,7 @@ function DropdownTask({setShowRow, showRow}) {
             }}
           >
             <svg
-              className="w-5 h-5 lg:w-7 lg:h-7  flex-shrink-0 hover:brightness-75 duration-300"
+              className="w-5 h-5 m-1 lg:w-7 lg:h-7 lg:m-2 flex-shrink-0 hover:brightness-75 duration-300"
               width="20"
               height="20"
               viewBox="0 0 20 20"

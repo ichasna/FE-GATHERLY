@@ -5,6 +5,7 @@ function Table() {
   const [newSection, setNewSection] = useState("");
   const [dummyData, setDummyData] = useState([
     {
+      id: 1,
       title: "Planning",
       data: [
         {
@@ -16,6 +17,7 @@ function Table() {
       ],
     },
     {
+      id: 2,
       title: "Execution",
       data: [
         {
@@ -27,6 +29,7 @@ function Table() {
       ],
     },
     {
+      id: 3,
       title: "Post Event",
       data: [
         {
@@ -83,7 +86,7 @@ function Table() {
         </thead>
         <tbody>
           {dummyData.map((data) => (
-            <TableRow title={data.title} data={data.data} />
+            <TableRow key={data.id} title={data.title} data={data.data} />
           ))}
           <tr className="border-t border-[#404040]">
             <td colSpan={12}>

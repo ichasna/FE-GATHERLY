@@ -9,10 +9,18 @@ function Table() {
       title: "Planning",
       data: [
         {
+          id: 1,
           task: "Create an event plan and define roles",
           dueDate: "15/05/2023",
           PIC: "Amira Nisrina",
-          description: "",
+          description: "Test description",
+        },
+        {
+          id: 2,
+          task: "COMPFEST",
+          dueDate: "23/02/2023",
+          PIC: "Iqbal",
+          description: "Ya kali ga kuy",
         },
       ],
     },
@@ -21,10 +29,11 @@ function Table() {
       title: "Execution",
       data: [
         {
+          id: 1,
           task: "Create an event plan",
           dueDate: "20/05/2023",
           PIC: "Daffa",
-          description: "",
+          description: "Programmer event",
         },
       ],
     },
@@ -33,10 +42,25 @@ function Table() {
       title: "Post Event",
       data: [
         {
+          id: 1,
           task: "Define roles",
           dueDate: "21/05/2023",
           PIC: "Rangga",
-          description: "",
+          description: "Rangga main valo mulu woy",
+        },
+        {
+          id: 2,
+          task: "Rangga valo",
+          dueDate: "21/05/2023",
+          PIC: "Yudhistira",
+          description: "Valo kata rangga",
+        },
+        {
+          id: 3,
+          task: "DeadYK",
+          dueDate: "23/06/1990",
+          PIC: "Brata",
+          description: "Gage valo",
         },
       ],
     },

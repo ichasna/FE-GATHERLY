@@ -23,10 +23,10 @@ function TableRow({ title, data }) {
       </tr>
       {showRow && (
         <>
-          {data.map((item, index) => (
+          {data.map((item) => (
             <tr
-              key={index}
-              className="border-t border-[#404040] text-[11px] md:text-[13px] lg:text-[16px] hover:bg-[#171a1f] duration-300"
+              key={item.id}
+              className="border-t border-[#404040] text-[11px] md:text-[13px] lg:text-[16px] hover:bg-[#14181c] duration-300"
               onClick={editTask}
             >
               <td colSpan={4}>
@@ -58,20 +58,22 @@ function TableRow({ title, data }) {
               </td>
               <td colSpan={2}>
                 <div className="flex flex-row justify-center items-center">
-                  <span className="bg-white text-center w-24 lg:w-40 lg:py-3 lg:px-5 lg:my-3 py-1 px-2 my-2 rounded-xl font-bold text-[#787486] whitespace-nowrap">
+                  <span className="bg-white text-center w-24 lg:w-40 lg:py-3 lg:px-5 lg:my-3 py-1 px-2 my-2 rounded-xl font-bold text-[#787486]">
                     {item.PIC}
                   </span>
                 </div>
               </td>
               <td colSpan={4}>
                 <div className="flex flex-row justify-start items-center">
-                  {item.description}
+                  <span className="text-white font-light">
+                    {item.description}
+                  </span>
                 </div>
               </td>
             </tr>
           ))}
           <tr
-            className="border-t border-[#404040] text-[11px] lg:text-[16px] hover:bg-[#171a1f] duration-300"
+            className="border-t border-[#404040] text-[11px] lg:text-[16px] hover:bg-[#14181c] duration-300"
             onClick={editTask}
           >
             <td colSpan={12}>

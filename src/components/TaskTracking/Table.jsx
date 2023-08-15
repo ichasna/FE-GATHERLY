@@ -93,7 +93,7 @@ function Table() {
               >
                 <button type="submit">
                   <svg
-                    className="w-4 h-4 lg:w-5 lg:h-5 flex-shrink-0 hover:brightness-75 duration-300"
+                    className="w-5 h-5 lg:w-7 lg:h-7 flex-shrink-0 hover:brightness-75 duration-300"
                     width="20"
                     height="20"
                     viewBox="0 0 20 20"
@@ -111,7 +111,7 @@ function Table() {
                   value={newSection}
                   onChange={(e) => setNewSection(e.target.value)}
                   placeholder="Add a section..."
-                  className="text-[15px] lg:text-[20px] text-[#919191] opacity-50 bg-transparent focus:outline-none focus:ring-0 font-bold ml-3"
+                  className="text-[15px] md:text-[17px] lg:text-[20px] text-[#919191] opacity-50 bg-transparent focus:outline-none focus:ring-0 font-bold ml-3"
                 ></input>
               </form>
             </td>

@@ -3,16 +3,19 @@ import DropdownTask from "./util/DropdownTask";
 
 function TableRow({ title, data }) {
   const [showRow, setShowRow] = useState(false);
-  const testFunc = () => {
-    console.log("test")
-  }
+  const editTask = () => {
+    console.log("edit");
+  };
+  const addTask = () => {
+    console.log("add");
+  };
   return (
     <>
       <tr className="border-t border-[#404040]">
         <td colSpan={12}>
           <div className="flex flex-row justify-start items-center p-2 lg:p-4">
             <DropdownTask setShowRow={setShowRow} showRow={showRow} />
-            <span className="text-[15px] lg:text-[20px] text-[#919191] font-bold ml-3">
+            <span className="text-[15px] md:text-[17px] lg:text-[20px] text-[#919191] font-bold ml-3">
               {title}
             </span>
           </div>
@@ -23,13 +26,13 @@ function TableRow({ title, data }) {
           {data.map((item, index) => (
             <tr
               key={index}
-              className="border-t border-[#404040] text-[11px] lg:text-[16px]"
-              onClick={testFunc}
+              className="border-t border-[#404040] text-[11px] md:text-[13px] lg:text-[16px] hover:bg-[#171a1f] duration-300"
+              onClick={editTask}
             >
               <td colSpan={4}>
                 <div className="flex flex-row justify-start items-center p-2 lg:p-4">
                   <svg
-                    className="w-4 h-4 lg:w-5 lg:h-5 flex-shrink-0 hover:brightness-75 duration-300"
+                    className="w-5 h-5 lg:w-7 lg:h-7 flex-shrink-0 hover:brightness-75 duration-300"
                     width="22"
                     height="22"
                     viewBox="0 0 22 22"
@@ -67,11 +70,14 @@ function TableRow({ title, data }) {
               </td>
             </tr>
           ))}
-          <tr className="border-t border-[#404040] text-[11px] lg:text-[16px]">
+          <tr
+            className="border-t border-[#404040] text-[11px] lg:text-[16px] hover:bg-[#171a1f] duration-300"
+            onClick={editTask}
+          >
             <td colSpan={12}>
               <div className="flex flex-row justify-start items-center p-2 lg:p-4">
                 <svg
-                  className="w-4 h-4 lg:w-5 lg:h-5 flex-shrink-0 hover:brightness-75 duration-300"
+                  className="w-5 h-5 lg:w-7 lg:h-7 flex-shrink-0 hover:brightness-75 duration-300"
                   width="22"
                   height="22"
                   viewBox="0 0 22 22"

@@ -3,6 +3,9 @@ import DropdownTask from "./util/DropdownTask";
 
 function TableRow({ title, data }) {
   const [showRow, setShowRow] = useState(false);
+  const testFunc = () => {
+    console.log("test")
+  }
   return (
     <>
       <tr className="border-t border-[#404040]">
@@ -21,6 +24,7 @@ function TableRow({ title, data }) {
             <tr
               key={index}
               className="border-t border-[#404040] text-[11px] lg:text-[16px]"
+              onClick={testFunc}
             >
               <td colSpan={4}>
                 <div className="flex flex-row justify-start items-center p-2 lg:p-4">

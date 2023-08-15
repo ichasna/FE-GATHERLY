@@ -7,7 +7,7 @@ function EventDetails() {
           <b className="relative flex items-center m-4 w-[242px] h-[45px] shrink-0">
             COMPFEST 13
           </b>
-          <div class="relative w-[650px] h-[1.5px] bg-[#404040] mx-auto"></div>
+          <div className="relative w-[650px] h-[1.5px] bg-[#404040] mx-auto"></div>
           <div className="relative text-[14px] flex items-center w-[684px] mt-2 p-4 h-[84px] shrink-0">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim

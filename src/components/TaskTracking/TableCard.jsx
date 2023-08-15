@@ -13,7 +13,7 @@ function TableCard() {
         </div>
       </div>
 
-      <div class="relative w-full h-[1.5px] bg-[#404040]"></div>
+      <div className="relative w-full h-[1.5px] bg-[#404040]"></div>
       <div className="p-4 lg:p-8">
         <Table />
       </div>
